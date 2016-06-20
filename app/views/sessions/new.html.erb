@@ -1,0 +1,20 @@
+<%= image_tag '0.png', :class => "image-small" %>
+
+<%= form_for :sessions, url: {action: "create"} do |f| %>
+
+  <% flash.each do |key,value| %>
+    <div class="error-list"><%= value %></div>
+  <% end %>
+
+  <p>
+    <%= f.label :username %>
+    <%= f.text_field :username %>
+  </p>
+  <p>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </p>
+  <p>
+    <%= f.submit "Login" %>
+  </p>
+<% end %>

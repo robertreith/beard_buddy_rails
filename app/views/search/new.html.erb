@@ -1,0 +1,13 @@
+<%= form_for :search, url: search_path do |f| %>
+  <p>
+    <%= f.hidden_field :term, :value => "barber" %>
+    <%= f.hidden_field :limit, :value => "10" %>
+    <%= image_tag '0.png', :class => "image" %><br><br>
+    <%= f.label :Postal_code %><br>
+    <%= f.text_field :postal_code %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Get Trimmed" %>
+  </p>
+<% end %>

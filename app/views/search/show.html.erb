@@ -1,0 +1,14 @@
+<%= image_tag '0.png', :class => "image-small" %>
+
+<ul>
+<h4><a class='search' href='/search'>Click Here to Start a New Search</a></h4>
+<% @results.businesses.each do |bus| %>
+  <div>
+    <p class='name'><%= bus.name %></p>
+    <p class='address'><%= bus.location.address.first %></p>
+    <p class='phone'><%= bus.display_phone[3..-1] %></p>
+    <p class='rating'>Rating - <%= bus.rating %></p>
+    <p class='review'><%= bus.snippet_text %><br><br></p>
+  </div>
+<% end %>
+</ul>

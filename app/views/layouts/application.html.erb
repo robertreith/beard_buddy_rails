@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BeardBuddyRails</title>
+  <title>BeardBuddy</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700' rel='stylesheet' type='text/css'>
 </head>
+  <%= link_to 'Home', root_path %> |
+    <% if logged_in? %>
+      <%= link_to current_user.username, user_path(current_user) %> |
+      <%= link_to 'Logout', logout_path, method: "delete" %>
+    <% else %>
+      <%= link_to 'Register', new_user_path %> |
+      <%= link_to "Login", login_path %>
+    <% end %>
 <body>
-
+ <h1>Welcome to Beard Buddy</h1>
+ <h5>With great beard comes great responsibility</h5>
+ <h5 class="version">v1.1 Rails Edition</h5>
 <%= yield %>
 
 </body>
