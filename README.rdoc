@@ -1,28 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Beard Buddy is Ruby on Rails based web application built within two days that utilizes the Yelp API to find barber shops when a user inputs the zip code. The application returns 10 shops in the area with the name, address, number, phone number, rating and a review from Yelp. 
 
-Things you may want to cover:
+This application was  created as a means to learn Ruby on Rails as well as learn how to use the Yelp API. 
 
-* Ruby version
+Future iteration of this application will alow users Review various products that are listed on the Products Page.
 
-* System dependencies
+Beard Buddy was created by [Robert Reith](https://github.com/robertreith), and [Ayaz Uddin](https://github.com/Ayaz2589)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+###### &copy; 2016 Robert Reith, Ayaz Uddin
